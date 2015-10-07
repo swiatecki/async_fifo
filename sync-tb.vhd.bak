@@ -1,0 +1,66 @@
+LIBRARY ieee  ; 
+LIBRARY std  ; 
+USE ieee.std_logic_1164.all  ; 
+USE ieee.std_logic_textio.all  ; 
+USE ieee.std_logic_unsigned.all  ; 
+USE std.textio.all  ; 
+ENTITY \sync-tb\  IS 
+END ; 
+ 
+ARCHITECTURE \sync-tb_arch\   OF \sync-tb\   IS
+  SIGNAL inclk   :  STD_LOGIC  ; 
+  SIGNAL ptr_sync   :  std_logic_vector (4 downto 0)  ; 
+  SIGNAL ptr   :  std_logic_vector (4 downto 0)  ; 
+  SIGNAL outclk   :  STD_LOGIC  ; 
+  SIGNAL reset   :  STD_LOGIC  ; 
+  COMPONENT sync  
+    PORT ( 
+      inclk  : in STD_LOGIC ; 
+      ptr_sync  : out std_logic_vector (4 downto 0) ; 
+      ptr  : in std_logic_vector (4 downto 0) ; 
+      outclk  : in STD_LOGIC ; 
+      reset  : in STD_LOGIC ); 
+  END COMPONENT ; 
+BEGIN
+  DUT  : sync  
+    PORT MAP ( 
+      inclk   => inclk  ,
+      ptr_sync   => ptr_sync  ,
+      ptr   => ptr  ,
+      outclk   => outclk  ,
+      reset   => reset   ) ; 
+
+
+
+-- "Constant Pattern"
+-- Start Time = 100 ns, End Time = 1 us, Period = 0 ns
+  Process
+	Begin
+	 reset  <= '1'  ;
+	wait for 20 ns ;
+	reset
+	wait;
+ End Process;
+
+
+-- "Clock Pattern" : dutyCycle = 50
+-- Start Time = 0 ns, End Time = 1 us, Period = 10 ns
+  Process
+	Begin
+	 inclk  <= '0'  ;
+	wait for 1 ns ;
+-- dumped values till 1 ns
+	wait;
+ End Process;
+
+
+-- "Clock Pattern" : dutyCycle = 50
+-- Start Time = 0 ns, End Time = 1 us, Period = 20 ns
+  Process
+	Begin
+	 outclk  <= '0'  ;
+	wait for 1 ns ;
+-- dumped values till 1 ns
+	wait;
+ End Process;
+END;
