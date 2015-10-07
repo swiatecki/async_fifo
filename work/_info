@@ -68,9 +68,9 @@ V2Fi:3FJkWU?UBBAKI12Y:1
 !s100 :fKDF=iM[i>X;6JcW@NV_0
 R9
 32
-Z19 !s110 1444216608
+Z19 !s110 1444217880
 !i10b 1
-Z20 !s108 1444216608.148000
+Z20 !s108 1444217880.044000
 Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/async_fifo.vhd|
 Z22 !s107 C:/FPGA_projects/async_fifo/async_fifo.vhd|
 !i113 1
@@ -112,7 +112,7 @@ R9
 32
 R19
 !i10b 1
-Z26 !s108 1444216608.681000
+Z26 !s108 1444217880.691000
 Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/async_fifo_tb.vhd|
 Z28 !s107 C:/FPGA_projects/async_fifo/async_fifo_tb.vhd|
 !i113 1
@@ -140,7 +140,7 @@ R28
 R14
 R15
 Efifo_rc
-Z29 w1444216601
+Z29 w1444217873
 R1
 R2
 Z30 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
@@ -155,9 +155,9 @@ V5U7DNXd9o1]BPASahU=?D1
 !s100 OBL_9<RMUSi8i[Yzgz`kM3
 R9
 32
-Z33 !s110 1444216607
+Z33 !s110 1444217878
 !i10b 1
-Z34 !s108 1444216607.025000
+Z34 !s108 1444217878.921000
 Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\FPGA_projects\async_fifo\fifo_rc.vhd|
 Z36 !s107 C:\FPGA_projects\async_fifo\fifo_rc.vhd|
 !i113 1
@@ -172,8 +172,8 @@ R5
 DEx4 work 7 fifo_rc 0 22 5U7DNXd9o1]BPASahU=?D1
 l33
 L26
-VOW:Uj`W`zN`5h]02V>9R72
-!s100 GWSOInVHn?M2EUhe_8lZ40
+V`X?Yehz]UkCWQJ7lQ[LPE0
+!s100 ne>30@bzIGnzfHFKLjM8V2
 R9
 32
 R33
@@ -200,11 +200,11 @@ Vka9lO?;15kn0S8kh`f_F@0
 !s100 L;P4]>E1jb8;AoYB5>QlM0
 R9
 32
-Z40 !s110 1444216606
+R33
 !i10b 1
-Z41 !s108 1444216606.479000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/fifo_wc.vhd|
-Z43 !s107 C:/FPGA_projects/async_fifo/fifo_wc.vhd|
+Z40 !s108 1444217878.370000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/fifo_wc.vhd|
+Z42 !s107 C:/FPGA_projects/async_fifo/fifo_wc.vhd|
 !i113 1
 R14
 R15
@@ -221,71 +221,71 @@ V_J;P91heT9J]e`YzD1CTC1
 !s100 Cj4c0X;d[j`JTM8;m]`GZ2
 R9
 32
-R40
+R33
 !i10b 1
+R40
 R41
 R42
-R43
 !i113 1
 R14
 R15
 Ensram
-Z44 w1443610052
-Z45 DPx9 altera_mf 20 altera_mf_components 0 22 :zX8E]9f?PCk8X:Y[X97:1
+Z43 w1443610052
+Z44 DPx9 altera_mf 20 altera_mf_components 0 22 :zX8E]9f?PCk8X:Y[X97:1
 R4
 R5
 R6
-Z46 8C:/FPGA_projects/async_fifo/nsram.vhd
-Z47 FC:/FPGA_projects/async_fifo/nsram.vhd
+Z45 8C:/FPGA_projects/async_fifo/nsram.vhd
+Z46 FC:/FPGA_projects/async_fifo/nsram.vhd
 l0
 L43
 V4O110X>C@Z5Knf>H`V2]62
 !s100 gCmnG_n5^J[biP>m7TJ6X0
 R9
 32
-Z48 !s110 1444216609
+Z47 !s110 1444217881
 !i10b 1
-Z49 !s108 1444216609.231000
-Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/nsram.vhd|
-Z51 !s107 C:/FPGA_projects/async_fifo/nsram.vhd|
+Z48 !s108 1444217881.252000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/nsram.vhd|
+Z50 !s107 C:/FPGA_projects/async_fifo/nsram.vhd|
 !i113 1
 R14
 R15
 Asyn
-R45
+R44
 R4
 R5
-Z52 DEx4 work 5 nsram 0 22 4O110X>C@Z5Knf>H`V2]62
+Z51 DEx4 work 5 nsram 0 22 4O110X>C@Z5Knf>H`V2]62
 l62
 L58
-Z53 VW;z3jMcomEchfl5F@el2d3
-Z54 !s100 OSnb9``G0BDlb16g67oVk1
+Z52 VW;z3jMcomEchfl5F@el2d3
+Z53 !s100 OSnb9``G0BDlb16g67oVk1
 R9
 32
-R48
+R47
 !i10b 1
+R48
 R49
 R50
-R51
 !i113 1
 R14
 R15
 Esync
-Z55 w1444215696
+Z54 w1444215696
 R4
 R5
 R6
-Z56 8C:/FPGA_projects/async_fifo/sync.vhd
-Z57 FC:/FPGA_projects/async_fifo/sync.vhd
+Z55 8C:/FPGA_projects/async_fifo/sync.vhd
+Z56 FC:/FPGA_projects/async_fifo/sync.vhd
 l0
 L4
 V9HEDCIV:5=WBTK3nPb9>E3
 !s100 IPkDoZU2kVCKoWXTzNPz42
 R9
 32
-R33
+Z57 !s110 1444217879
 !i10b 1
-Z58 !s108 1444216607.575000
+Z58 !s108 1444217879.474000
 Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/FPGA_projects/async_fifo/sync.vhd|
 Z60 !s107 C:/FPGA_projects/async_fifo/sync.vhd|
 !i113 1
@@ -301,7 +301,7 @@ V>]MNbZjK7V]E;[eB_8dco2
 !s100 T[aaGhD>BL[mL6SWV=HKk1
 R9
 32
-R33
+R57
 !i10b 1
 R58
 R59

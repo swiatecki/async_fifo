@@ -32,7 +32,7 @@ signal fifo_occu_out_int : std_logic_vector(4 downto 0) := "00000";
 
 begin
 
-empty_int <= not(fifo_occu_out_int(4) and fifo_occu_out_int(3) and fifo_occu_out_int(2) and fifo_occu_out_int(1) and fifo_occu_out_int(0)); -- Only full if occu = 16, hence 10000
+empty_int <= not(fifo_occu_out_int(4) or fifo_occu_out_int(3) or fifo_occu_out_int(2) or fifo_occu_out_int(1) or fifo_occu_out_int(0)); -- Only full if occu = 16, hence 10000
 
 
 concur : process(rptr_int,wptr_s,fifo_occu_out_int,empty_int,read_enable)

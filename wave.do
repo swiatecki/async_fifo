@@ -3,33 +3,20 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate /async_fifo_tb/read_data_out
 add wave -noupdate /async_fifo_tb/fifo_occu_out
 add wave -noupdate /async_fifo_tb/DUT/wptr_s
-add wave -noupdate /async_fifo_tb/empty
+add wave -noupdate -color Red /async_fifo_tb/full
 add wave -noupdate /async_fifo_tb/DUT/empty
-add wave -noupdate /async_fifo_tb/DUT/fifo_occu_out
-add wave -noupdate /async_fifo_tb/rclk
-add wave -noupdate /async_fifo_tb/write_enable
-add wave -noupdate /async_fifo_tb/wclk
-add wave -noupdate /async_fifo_tb/write_data_in
-add wave -noupdate /async_fifo_tb/read_enable
-add wave -noupdate /async_fifo_tb/full
-add wave -noupdate /async_fifo_tb/fifo_occu_in
-add wave -noupdate /async_fifo_tb/reset
+add wave -noupdate -format Analog-Step -height 80 -max 15.0 -min -16.0 -radix unsigned /async_fifo_tb/DUT/fifo_occu_out
+add wave -noupdate -color Cyan /async_fifo_tb/write_enable
+add wave -noupdate -radix unsigned /async_fifo_tb/write_data_in
+add wave -noupdate -format Analog-Step -height 80 -max 16.0 -radix unsigned /async_fifo_tb/fifo_occu_in
 add wave -noupdate /async_fifo_tb/DUT/reset
 add wave -noupdate /async_fifo_tb/DUT/wclk
 add wave -noupdate /async_fifo_tb/DUT/rclk
-add wave -noupdate /async_fifo_tb/DUT/write_enable
-add wave -noupdate /async_fifo_tb/DUT/read_enable
-add wave -noupdate /async_fifo_tb/DUT/fifo_occu_in
-add wave -noupdate /async_fifo_tb/DUT/write_data_in
 add wave -noupdate /async_fifo_tb/DUT/read_data_out
-add wave -noupdate /async_fifo_tb/DUT/full
-add wave -noupdate /async_fifo_tb/DUT/waddr
-add wave -noupdate /async_fifo_tb/DUT/raddr
+add wave -noupdate -radix unsigned /async_fifo_tb/DUT/waddr
 add wave -noupdate /async_fifo_tb/DUT/wptr
 add wave -noupdate /async_fifo_tb/DUT/rptr
 add wave -noupdate /async_fifo_tb/DUT/rptr_s
-add wave -noupdate /async_fifo_tb/DUT/wen
-add wave -noupdate /async_fifo_tb/DUT/ren
 add wave -noupdate /async_fifo/reset
 add wave -noupdate /async_fifo/wclk
 add wave -noupdate /async_fifo/rclk
@@ -42,10 +29,10 @@ add wave -noupdate /async_fifo/read_data_out
 add wave -noupdate /async_fifo/full
 add wave -noupdate /async_fifo/empty
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {156497 ps} 0}
+WaveRestoreCursors {{Cursor 1} {106924 ps} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 248
-configure wave -valuecolwidth 100
+configure wave -namecolwidth 309
+configure wave -valuecolwidth 163
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -58,7 +45,7 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {1312500 ps}
+WaveRestoreZoom {0 ps} {984376 ps}
 view wave 
 wave clipboard store
 wave create -pattern none -portmode in -language vhdl /async_fifo/reset 
