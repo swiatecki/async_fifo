@@ -85,7 +85,7 @@ END COMPONENT;
 
 signal waddr,raddr : STD_LOGIC_VECTOR (3 downto 0):= "0000";
 signal wptr,rptr,wptr_s, rptr_s : STD_LOGIC_VECTOR(4 downto 0) := "00000";
-signal wen,ren,full_int : std_logic := '0';
+signal wen,ren,full_int : std_logic;
 
 
 begin
@@ -118,7 +118,7 @@ mainLogic : process(reset,wclk)
 c : process(reset,write_enable,full_int)
 		begin
 			
-			wen <= write_enable and not full_int;
+			--wen <= write_enable and not full_int;
 			full <= full_int;
 	end process c;	
 

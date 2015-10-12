@@ -95,7 +95,7 @@ fifo_occu_out[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 fifo_occu_out[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 fifo_occu_out[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 fifo_occu_out[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-empty <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+empty <= empty_int.DB_MAX_OUTPUT_PORT_TYPE
 raddr[0] <= rptr_int[0].DB_MAX_OUTPUT_PORT_TYPE
 raddr[1] <= rptr_int[1].DB_MAX_OUTPUT_PORT_TYPE
 raddr[2] <= rptr_int[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -106,11 +106,11 @@ rptr[1] <= rptr_int[1].DB_MAX_OUTPUT_PORT_TYPE
 rptr[2] <= rptr_int[2].DB_MAX_OUTPUT_PORT_TYPE
 rptr[3] <= rptr_int[3].DB_MAX_OUTPUT_PORT_TYPE
 rptr[4] <= rptr_int[4].DB_MAX_OUTPUT_PORT_TYPE
-wptr_s[0] => Add0.IN5
-wptr_s[1] => Add0.IN4
-wptr_s[2] => Add0.IN3
-wptr_s[3] => Add0.IN2
-wptr_s[4] => Add0.IN1
+wptr_s[0] => Add0.IN10
+wptr_s[1] => Add0.IN9
+wptr_s[2] => Add0.IN8
+wptr_s[3] => Add0.IN7
+wptr_s[4] => Add0.IN6
 
 
 |async_fifo|sync:write_sync
