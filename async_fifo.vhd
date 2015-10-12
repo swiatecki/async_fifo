@@ -103,27 +103,13 @@ mainLogic : process(reset,wclk)
 		begin
 			if(reset = '1') then
 			-- reset logic
-				
-				--rptr <= (others => '0');
-				--wptr <= (others => '0');
-				--wptr_s <= (others => '0');
-				--rptr_s <=  (others => '0');
-				--waddr <= (others => '0');
-				--raddr <= (others => '0');
-				--wen <= '0';
-				--ren <= '0';
-
+			
 
 			elsif rising_edge(wclk) then
 
 			-- main part 
 
-				--if(write_enable = '1' and full) then 
-
-				--wen <= '1';
-
-				--end if;
-
+		
 			-- end main part
 		end if;
 	end process mainLogic;

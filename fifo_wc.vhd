@@ -30,39 +30,28 @@ signal fifo_occu_in_int : std_logic_vector(4 downto 0) := "00000";
 
 begin
 
-concur : process(wptr_int,rptr_s,fifo_occu_in_int,full_int,write_enable)
-begin
-
-	
 	fifo_occu_in_int <= wptr_int - rptr_s; -- Calculate occupancy
 
 	waddr <= wptr_int(3 downto 0);
-
-	full_int <= fifo_occu_in_int(4); -- Only full if occu = 16, hence 10000
 
 	wen <= write_enable and (not full_int); -- prevents wen going high if full!
 
 	wptr <= wptr_int; -- concurrently output the value of _int
 	full <= full_int; -- map to output
-	fifo_occu_in <= fifo_occu_in_int; -- set the output also
-end process concur;
+	
 -- TODO: 
 
-
+full_int <= fifo_occu_in_int(4); -- Only full if occu = 16, hence 10000
+fifo_occu_in <= fifo_occu_in_int; -- set the output 
 
 mainLogic : process(reset,wclk)
 		begin
 			if(reset = '1') then
 			-- reset logic
 				
-				--wptr <= (others => '0');
+				
 				wptr_int <= (others => '0');
-				--fifo_occu_in_int <= (others => '0');
-				
-				--full_int <= '0';
-				--full <= '0';
-				--rptr_s <= (others => '0');
-				
+			
 			
 			elsif rising_edge(wclk) then
 			
@@ -79,9 +68,5 @@ mainLogic : process(reset,wclk)
 			
 			end if;
 	end process mainLogic;
-	
-	
-	
-	
 
 end fifo_wc_arch;

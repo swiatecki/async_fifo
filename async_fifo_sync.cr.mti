@@ -9,30 +9,16 @@ Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Compiling entity async_fifo_tb
 -- Compiling architecture async_fifo_tb_arch of async_fifo_tb
 
-} {} {}} C:/FPGA_projects/async_fifo/sync.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/sync.vhd
+} {} {}} C:/FPGA_projects/async_fifo/fifo_rc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/fifo_rc.vhd
 Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity sync
--- Compiling architecture sync_arch of sync
-
-} {} {}} C:/FPGA_projects/async_fifo/async_fifo.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/async_fifo.vhd
-Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity async_fifo
--- Compiling architecture async_fifo_arch of async_fifo
-
-} {} {}} C:/FPGA_projects/async_fifo/nsram.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/nsram.vhd
-Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity nsram
--- Compiling architecture SYN of nsram
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity fifo_rc
+-- Compiling architecture fifo_rc_arch of fifo_rc
 
 } {} {}} C:/FPGA_projects/async_fifo/fifo_wc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/fifo_wc.vhd
 Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
@@ -44,5 +30,30 @@ Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity fifo_wc
 -- Compiling architecture fifo_wc_arch of fifo_wc
+
+} {} {}} C:/FPGA_projects/async_fifo/async_fifo.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/async_fifo.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity async_fifo
+-- Compiling architecture async_fifo_arch of async_fifo
+
+} {} {}} C:/FPGA_projects/async_fifo/sync.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/sync.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sync
+-- Compiling architecture sync_arch of sync
+
+} {} {}} C:/FPGA_projects/async_fifo/nsram.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/FPGA_projects/async_fifo/nsram.vhd
+Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity nsram
+-- Compiling architecture SYN of nsram
 
 } {} {}}

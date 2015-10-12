@@ -35,8 +35,8 @@ begin
 empty_int <= not(fifo_occu_out_int(4) or fifo_occu_out_int(3) or fifo_occu_out_int(2) or fifo_occu_out_int(1) or fifo_occu_out_int(0)); -- Only full if occu = 16, hence 10000
 
 
-concur : process(rptr_int,wptr_s,fifo_occu_out_int,empty_int,read_enable)
-begin
+--concur : process(rptr_int,wptr_s,fifo_occu_out_int,empty_int,read_enable)
+--begin
 
 	fifo_occu_out_int <= wptr_s - rptr_int; -- Calculate occupancy
 
@@ -46,13 +46,13 @@ begin
 	raddr <= rptr_int(3 downto 0);
 	ren <= read_enable and not empty_int; -- prevents ren going high if full!
 
-	empty <= empty_int; -- map to output
-	fifo_occu_out <= fifo_occu_out_int; -- set the output also
-	rptr <= rptr_int; -- concurrently output the value of _int
-
-end process concur;
+	
+	
 -- TODO: 
 
+empty <= empty_int; -- map to output
+fifo_occu_out <= fifo_occu_out_int; -- set the output also
+rptr <= rptr_int; -- concurrently output the value of _int
 
 mainLogic : process(reset,rclk)
 		begin
